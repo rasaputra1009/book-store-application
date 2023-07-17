@@ -1,0 +1,12 @@
+@import "./variables";
+
+.bookList {
+    gap:10px;
+    @include flex-container(row, nowrap, space-between, center)
+}
+
+@media (max-width: 767px) {
+    .bookList {
+        @include flex-container(column, wrap, center, center);
+    }
+}

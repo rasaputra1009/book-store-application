@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+
+.btn {
+    width: 100%;
+    @include flex-container(row, wrap, space-between, center);
+
+    .primary {
+        @include button-styles(lightgreen, #FF5722, none);
+        /* Yellow with a dark orange fallback */
+    }
+
+    .secondary {
+        @include button-styles(#EEEEEE, #757575, $button-border);
+        /* Light gray with a medium gray fallback */
+    }
+}
+
+.bookCard {
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+    .img {
+        width: 250px;
+        height: 350px;
+        padding: 10px;
+        margin: auto;
+        border-radius: 5px;
+    }
+
+}

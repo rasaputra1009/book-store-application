@@ -1,0 +1,43 @@
+// _variables.scss
+
+// Colors
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+$button-padding: 10px 20px;
+$button-border: 0px;
+$button-transition: background-color 0.3s ease;
+
+
+
+/* _mixins.scss */
+
+@mixin button-styles($background-color, $hover-background-color, $border-color) {
+    background-color: $background-color;
+    color: black;
+    border: $button-border;
+    border-radius: 5px;
+    padding: $button-padding;
+    cursor: pointer;
+    transition: $button-transition;
+
+    &:hover {
+        background-color: $hover-background-color;
+        border: $border-color;
+        padding: calc(#{$button-padding} + 2px);
+    }
+}
+
+
+@mixin link-styles {
+    // Add common link styles here
+    color: $secondary-color;
+}
+
+@mixin flex-container($direction: row, $wrap: nowrap, $justify: flex-start, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}

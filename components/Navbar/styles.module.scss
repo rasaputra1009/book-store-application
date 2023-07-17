@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.navBar {
+    background-color: #3f51b5;
+    /* Dark blue or any other color that matches your brand */
+    @include flex-container(row, wrap, space-around, center);
+
+    .title {
+        color: darkorange;
+        cursor: pointer;
+    }
+}
+
+.primary {
+    @include button-styles(lightgreen, #FF5722, none);
+    /* Yellow with a dark orange fallback */
+}
+
+.secondary {
+    @include button-styles(#EEEEEE, #757575, $button-border);
+    /* Light gray with a medium gray fallback */
+}
