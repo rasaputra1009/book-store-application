@@ -3,6 +3,7 @@ import { get } from "../utils";
 import BookCard from "../components/BookCard";
 import styles from "../styles/styles.module.scss";
 import Loader from "@/components/Loader";
+
 interface Book {
   id: number;
   name: string;
@@ -15,18 +16,19 @@ export default function Home() {
   const [bookList, setBookList] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const fetchBookList = async () => {
-      try {
-        const data = await get<Book[]>("/api/books");
-        setBookList(data);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching book list:", error);
-        setIsLoading(false);
-      }
-    };
+  const fetchBookList = async () => {
+    try {
+      const data = await get<Book[]>("/api/books");
+      setBookList(data);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Error fetching book list:", error);
+      setIsLoading(false);
+    }
+  };
 
+  useEffect(() => {
+    setIsLoading(true);
     fetchBookList();
   }, []);
 
