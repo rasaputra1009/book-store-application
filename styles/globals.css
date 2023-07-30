@@ -1,0 +1,44 @@
+/* styles/globals.css */
+
+/* Apply box-sizing: border-box to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margin and padding on all elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default font family and size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Responsive media query for mobile devices */
+@media (max-width: 768px) {
+  /* Example of mobile-specific styles */
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Add your other global styles here */
